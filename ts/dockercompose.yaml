@@ -1,0 +1,18 @@
+services:
+  backend:
+    image: backend-image
+    container_name: backend-api
+    build:
+      context: ../ts/backend
+      dockerfile: Dockerfile
+    ports:
+      - "8081:3000"
+    environment:
+      - NODE_ENV=development
+  frontend:
+    image: frontend-image
+    build:
+      context: ../ts/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:3000"
