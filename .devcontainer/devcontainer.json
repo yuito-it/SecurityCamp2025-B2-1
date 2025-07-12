@@ -1,5 +1,5 @@
 {
-  "dockerComposeFile": ["../ts/dockercompose.yaml"],
+  "dockerComposeFile": ["dockercompose.yaml"],
   "service": "frontend",
-  "workspaceFolder": "/usr/src/app",
+  "workspaceFolder": "/usr/src/app"
 }
