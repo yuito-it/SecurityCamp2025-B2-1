@@ -1,9 +1,14 @@
 package greetings
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
-func Hello(name string) string {
-	// 関数を代入している
+func Hello(name string) (string, error) {
+	if name == "" {
+		return "", errors.New("名前が空です")
+	}
 	message := fmt.Sprintf("Hi, %v. Welcome!", name)
-	return message
+	return message, nil
 }
